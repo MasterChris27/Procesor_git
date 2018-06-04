@@ -1,0 +1,60 @@
+Trying to structurate everything like a tree
+
+
+List of priorities for VHDL part 
+  not done            partialy(not tested)         done
+  
+                                                   -ALU
+																	-memory
+																	-cpu
+						-connection between cpu and memory
+				-the project actually works
+				All instructions added
+
+-adding IO system (possibly DMA aswell)
+
+
+
+
+
+
+Problems/Methods to solve 
+
+	-Define the instructions and where do we stock them 
+	
+	
+	-how do we interpret all instructions 
+       ex : Load R1 , @adr :
+             RA <- @adr
+				 RC <- "00"
+				 -- wait next tact(we consider that memory is able to output data in 1 tact)
+				 -- memory operations
+				 R1 <- RD
+		
+      I think we need to code all this part in order to be able to transport data 
+			so this means we declare and define here our assembly code
+				
+	- Are we adding PC and RI ? in terms of counting the code			 
+	
+
+
+	-Define IO -- later !
+
+Questions :
+
+   - how are we implementing the instruction memory
+	- should we have separate memory for instructions and data ? 
+	  Wich one is better in terms of performance and way to implement
+
+	-UU state of memory for test bench  ?! caused by INOUT bus of data !?
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
