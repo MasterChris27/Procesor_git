@@ -1,0 +1,31 @@
+Running: /usr/local/insa/Xilinx.ISE/13.4/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/boza/4IR/Archi/Procesor/test_pc_isim_beh.exe" -prj "/home/boza/4IR/Archi/Procesor/test_pc_beh.prj" "work.test_pc" 
+ISim O.87xd (signature 0x8ddf5b5d)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/boza/4IR/Archi/Procesor/UAL.vhd" into library work
+Parsing VHDL file "/home/boza/4IR/Archi/Procesor/UCP.vhd" into library work
+Parsing VHDL file "/home/boza/4IR/Archi/Procesor/memory.vhd" into library work
+Parsing VHDL file "/home/boza/4IR/Archi/Procesor/PC.vhd" into library work
+Parsing VHDL file "/home/boza/4IR/Archi/Procesor/test_pc.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 97752 KB
+Fuse CPU Usage: 920 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity UAL [ual_default]
+Compiling architecture behavioral of entity UCP [ucp_default]
+Compiling architecture behavioral of entity memory [memory_default]
+Compiling architecture behavioral of entity PC [pc_default]
+Compiling architecture behavior of entity test_pc
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 14 VHDL Units
+Built simulation executable /home/boza/4IR/Archi/Procesor/test_pc_isim_beh.exe
+Fuse Memory Usage: 673968 KB
+Fuse CPU Usage: 1020 ms
+GCC CPU Usage: 70 ms

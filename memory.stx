@@ -1,0 +1,43 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/boza/4IR/Archi/Procesor/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/boza/4IR/Archi/Procesor/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/boza/4IR/Archi/Procesor/sizes.vhd" in Library work.
+Architecture sizes of Entity sizes is up to date.
+Compiling vhdl file "/home/boza/4IR/Archi/Procesor/Ram_16.vhd" in Library work.
+Architecture behavioral of Entity reg_16 is up to date.
+Compiling vhdl file "/home/boza/4IR/Archi/Procesor/memory.vhd" in Library work.
+Entity <memory> compiled.
+Entity <memory> (Architecture <Behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+
+
+Total memory usage is 469836 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

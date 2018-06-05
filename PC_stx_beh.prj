@@ -1,0 +1,4 @@
+vhdl isim_temp "UAL.vhd"
+vhdl isim_temp "UCP.vhd"
+vhdl isim_temp "memory.vhd"
+vhdl isim_temp "PC.vhd"

@@ -45,6 +45,11 @@ architecture Behavioral of UAL is
 signal Sadd : STD_LOGIC_VECTOR(16 downto 0);
 signal Smul : STD_LOGIC_VECTOR(31 downto 0);
 signal Ssub : STD_LOGIC_VECTOR(16 downto 0);
+signal Sequ : STD_LOGIC_VECTOR(15 downto 0);
+signal Sinf : STD_LOGIC_VECTOR(15 downto 0);
+signal Sinf_eq : STD_LOGIC_VECTOR(15 downto 0);
+signal Ssup : STD_LOGIC_VECTOR(15 downto 0);
+signal Ssup_eq : STD_LOGIC_VECTOR(15 downto 0);
 signal Sleft: STD_LOGIC_VECTOR(15 downto 0);
 signal Sright:STD_LOGIC_VECTOR(15 downto 0);
 
@@ -55,13 +60,28 @@ begin
 		Ssub<=('0' & A)-('0' & B);
 		Sleft<=A(14 downto 0) & '0';
 		Sright<= '0'& A(15 downto 1);
-
+		Sequ<= x"FFFF" when A=B else
+				x"0000";
+		Sinf<= x"FFFF" when A<B else
+				x"0000";
+		Sinf_eq<= x"FFFF" when A<=B else
+				x"0000";
+		Ssup<= x"FFFF" when A>B else
+				x"0000";
+		Ssup_eq<= x"FFFF" when A>=B else
+				x"0000";
+		
 	S<= Sadd(15 downto 0) when op=x"00" else -- it shoudl have a default state where it doesn't do anything
 		 Ssub(15 downto 0) when op=x"01" else
 		 Smul(15 downto 0) when op=x"02" else
 		 Sleft when op=x"03" else
 		 Sright when op=x"04"else
-		 "ZZZZZZZZZZZZZZZZ" when op=x"FF"; -- default
+		 Sequ when op=x"07" else
+		 Sinf when op=x"08" else 
+		 Sinf_eq when op=x"09" else 
+		 Ssup when op=x"0a" else
+		 Ssup_eq when op=x"0b" else
+		 "ZZZZZZZZZZZZZZZZ" when op="ZZZZZZZZ"; -- default
 		 -- else -- must add a default mode to it !
 	  --  report "unreachable" when others;
 	  

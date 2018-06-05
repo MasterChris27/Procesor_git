@@ -1,0 +1,21 @@
+if(bus_control_cpu="00") then -- we are reading and we have to do 2/3 tacts
+		if(status=0) then
+			bus_address_memory <=bus_address_cpu;
+			bus_control_memory <=bus_control_memory;
+			status<=status+1;
+		elsif(status=1) then	
+			status<=status+1;  -- we could remove this part
+		elsif(status=2) then
+			bus_data_cpu <=bus_data_memory;
+			status<=0;
+		end if;
+	 
+	elsif(bus_control_cpu="01") then -- we are writing in the memory
+	 -- if status maybe  for waiting for a flag that the value was stored ?!
+	  bus_address_memory <=bus_address_cpu;
+	  bus_data_memory <=bus_data_cpu;
+	  bus_control_memory <= bus_control_cpu;
+	  
+	--elsif(bus_control_cpu="10") then -- we are reading from the I/O 
+	--elsif(bus_control_cpu="11") then -- we are writing to the I/O 	
+	

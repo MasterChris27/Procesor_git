@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/boza/4IR/Archi/Procesor/test_pc_isim_beh.exe" -prj "/home/boza/4IR/Archi/Procesor/test_pc_beh.prj" "work.test_pc" 

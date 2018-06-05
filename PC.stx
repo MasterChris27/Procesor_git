@@ -1,0 +1,44 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/boza/4IR/Archi/Procesor/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/boza/4IR/Archi/Procesor/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3516 - Found error in file "/home/boza/4IR/Archi/Procesor/PC.vhd". 
+WARNING:HDLParsers:3458 - Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file "/home/boza/4IR/Archi/Procesor/PC_vhdl.prj" may be inaccurate. Please put the files in the project file in correct order with keyword 'nosort' at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
+Compiling vhdl file "/home/boza/4IR/Archi/Procesor/UAL.vhd" in Library work.
+Entity <UAL> compiled.
+Entity <UAL> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/boza/4IR/Archi/Procesor/UCP.vhd" in Library work.
+Entity <ucp> compiled.
+ERROR:HDLParsers:1015 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 114. Wait for statement unsupported.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+
+
+Total memory usage is 469800 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

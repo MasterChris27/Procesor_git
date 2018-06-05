@@ -1,0 +1,4 @@
+vhdl work "UAL.vhd"
+vhdl work "UCP.vhd"
+vhdl work "memory.vhd"
+vhdl work "PC.vhd"

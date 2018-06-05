@@ -1,0 +1,5 @@
+set -tmpdir "/home/boza/4IR/Archi/Procesor/xst/projnav.tmp"
+set -xsthdpdir "/home/boza/4IR/Archi/Procesor/xst"
+elaborate
+-ifn pipe_line.prj
+-ifmt mixed
