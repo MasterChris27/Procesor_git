@@ -20,6 +20,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL; 
+use ieee.std_logic_textio;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -34,7 +35,8 @@ entity UCP is
     Port ( Bus_address : out  STD_LOGIC_VECTOR (7 downto 0); -- bus reserved for sending adresses 
            Bus_control : out  STD_LOGIC_VECTOR (1 downto 0);           -- bus reserved for selecting Memory Write/Read , IO write/Read
 			  Bus_data : inout  STD_LOGIC_VECTOR (15 downto 0);  -- bus reserved for sending and receiving data acording to RC
-			  Clk : in std_logic                                 -- clk to all main 
+			  Clk : in std_logic ;-- clk to all main 
+			  Interuptions : in std_logic  -- could be a vector so we say how many there are
 			  --add a new "bus" to communicate between UAL and RA
 			  );
 end UCP;

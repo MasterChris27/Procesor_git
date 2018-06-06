@@ -40,6 +40,7 @@ architecture Behavioral of PC is
 signal bus_data :std_logic_vector(15 downto 0); 
 signal bus_address :std_logic_vector(7 downto 0); 
 signal bus_control:std_logic_vector(1 downto 0); 
+signal bus_interuptions : std_logic;
 
 --signal bus_data_memory :std_logic_vector(15 downto 0); 
 --signal bus_address_memory :std_logic_vector(7 downto 0); 
@@ -54,8 +55,8 @@ component UCP is  -- what is the in part here is it from the point of view of th
     Port ( Bus_address : out  STD_LOGIC_VECTOR (7 downto 0); -- bus reserved for sending adresses 
            Bus_control : out  STD_LOGIC_VECTOR (1 downto 0);           -- bus reserved for selecting Memory Write/Read , IO write/Read
 			  Bus_data : inout  STD_LOGIC_VECTOR (15 downto 0);  -- bus reserved for sending and receiving data acording to RC
-			  Clk : in std_logic                                 -- clk to all main 
-			  --add a new "bus" to communicate between UAL and RA
+			  Clk : in std_logic;
+			  Interuptions : in std_logic 
 			  );
 end component;
 
@@ -66,13 +67,16 @@ component memory is
 			  Clk : in STD_LOGIC);                              -- clock so we have everything sync-ed
 end component;
 
---component IO is
-  --  Port ( Clk : in  STD_LOGIC;
-	--		  Bus_control : in std_LOGIC_vector(1 downto 0);
-     --      Bus_data : in  STD_LOGIC_VECTOR (15 downto 0);
-       --    Bus_address : in  STD_LOGIC_VECTOR (15 downto 0));
---end component;
 
+component input_output is
+    Port ( 
+           Bus_address : in  STD_LOGIC_VECTOR (7 downto 0);
+			  Bus_control : in std_logic_vector(1 downto 0);
+           Bus_data : in  STD_LOGIC_VECTOR (15 downto 0);
+			  Clk : in  STD_LOGIC;
+			  Bus_interruptions : out std_logic
+			  );
+end component;
 
 
 begin
@@ -80,9 +84,9 @@ begin
 --CPU:UCP port map(bus_address_cpu(7 downto 0),bus_control_cpu(1 downto 0),bus_data_cpu(15 downto 0),Clk);
 --MEM : memory port map (bus_address_memory(7 downto 0),bus_control_memory(1 downto 0),bus_data_memory(15 downto 0),Clk);
 
-CPU:UCP port map(bus_address,bus_control,bus_data,Clk);
-MEM : memory port map (bus_address,bus_control,bus_data,Clk);
---IO : IO port map (bus_address(7 downto 0),bus_control(3 downto 0),bus_data(15 downto 0),Clk);
+CPU : UCP          port map(bus_address,bus_control,bus_data,Clk,bus_interuptions);
+MEM : memory       port map(bus_address,bus_control,bus_data,Clk);
+Peripherics: IO port map(bus_address,bus_control,bus_data,Clk,bus_interuptions);
 
 
 
@@ -92,11 +96,6 @@ process
  wait for 50ns;
   wait until rising_edge(Clk); 
   
-	
-
-	
-	
-	
 	
 
 end process;

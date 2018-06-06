@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"/home/boza/4IR/Archi/Procesor/PC.vhd" Line 89: &lt;<arg fmt="%s" index="1">input_output</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">/home/boza/4IR/Archi/Procesor/PC.vhd</arg>&quot; Line <arg fmt="%d" index="2">89</arg>. Instance <arg fmt="%s" index="3">input_output</arg> is unbound
+</msg>
+
 </messages>
 

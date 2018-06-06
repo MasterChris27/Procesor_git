@@ -9,9 +9,11 @@ Parsing VHDL file "/home/boza/4IR/Archi/Procesor/memory.vhd" into library work
 Parsing VHDL file "/home/boza/4IR/Archi/Procesor/PC.vhd" into library work
 Parsing VHDL file "/home/boza/4IR/Archi/Procesor/test_pc.vhd" into library work
 Starting static elaboration
+WARNING:HDLCompiler:89 - "/home/boza/4IR/Archi/Procesor/PC.vhd" Line 89: <input_output> remains a black-box since it has no binding entity.
 Completed static elaboration
 Fuse Memory Usage: 97752 KB
-Fuse CPU Usage: 920 ms
+Fuse CPU Usage: 1110 ms
+WARNING:Simulator:648 - "/home/boza/4IR/Archi/Procesor/PC.vhd" Line 89. Instance input_output is unbound
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -26,6 +28,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 14 VHDL Units
 Built simulation executable /home/boza/4IR/Archi/Procesor/test_pc_isim_beh.exe
-Fuse Memory Usage: 673968 KB
-Fuse CPU Usage: 1020 ms
-GCC CPU Usage: 70 ms
+Fuse Memory Usage: 673988 KB
+Fuse CPU Usage: 1280 ms
+GCC CPU Usage: 420 ms
