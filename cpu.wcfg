@@ -8,8 +8,10 @@
             <top_module name="numeric_std" />
             <top_module name="std_logic_1164" />
             <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
             <top_module name="std_logic_unsigned" />
             <top_module name="test_pc" />
+            <top_module name="textio" />
          </top_modules>
       </db_ref>
    </db_ref_list>
@@ -32,6 +34,86 @@
       <obj_property name="ElementShortName">reg[15:0]</obj_property>
       <obj_property name="ObjectShortName">reg[15:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">reg[15]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">reg[14]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">reg[13]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">reg[12]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">reg[11]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">reg[10]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">reg[9]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">reg[8]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">reg[7]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">reg[6]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">reg[5]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">reg[4]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">reg[3]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">reg[2]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">reg[1]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/test_pc/uut/CPU/reg[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">reg[0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group543" type="group">
       <obj_property name="label">intern_cpu</obj_property>
@@ -40,6 +122,7 @@
       <wvobject fp_name="group1157" type="group">
          <obj_property name="label">Recursivity</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <wvobject fp_name="/test_pc/uut/CPU/reg_recursivity" type="array" db_ref_id="1">
             <obj_property name="ElementShortName">reg_recursivity[10:0]</obj_property>
             <obj_property name="ObjectShortName">reg_recursivity[10:0]</obj_property>
@@ -109,6 +192,7 @@
       <wvobject fp_name="group1158" type="group">
          <obj_property name="label">bus</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <wvobject fp_name="/test_pc/uut/CPU/bus_address" type="array" db_ref_id="1">
             <obj_property name="ElementShortName">bus_address[7:0]</obj_property>
             <obj_property name="ObjectShortName">bus_address[7:0]</obj_property>
@@ -128,6 +212,7 @@
       <wvobject fp_name="group1160" type="group">
          <obj_property name="label">instructions</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <wvobject fp_name="/test_pc/uut/CPU/instr_mem" type="array" db_ref_id="1">
             <obj_property name="ElementShortName">instr_mem[0:512]</obj_property>
             <obj_property name="ObjectShortName">instr_mem[0:512]</obj_property>
@@ -2712,6 +2797,7 @@
       <wvobject fp_name="group1159" type="group">
          <obj_property name="label">ALU</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <wvobject fp_name="/test_pc/uut/CPU/result" type="array" db_ref_id="1">
             <obj_property name="ElementShortName">result[15:0]</obj_property>
             <obj_property name="ObjectShortName">result[15:0]</obj_property>
@@ -2738,54 +2824,10 @@
       <obj_property name="label">memory</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <wvobject fp_name="group1161" type="group">
-         <obj_property name="label">first 20 memory slots</obj_property>
+      <wvobject fp_name="group1620" type="group">
+         <obj_property name="label">small 10</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[0]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[0]</obj_property>
-            <obj_property name="ObjectShortName">matrix[0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[1]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[1]</obj_property>
-            <obj_property name="ObjectShortName">matrix[1]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[2]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[2]</obj_property>
-            <obj_property name="ObjectShortName">matrix[2]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[3]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[3]</obj_property>
-            <obj_property name="ObjectShortName">matrix[3]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[4]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[4]</obj_property>
-            <obj_property name="ObjectShortName">matrix[4]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[6]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[6]</obj_property>
-            <obj_property name="ObjectShortName">matrix[6]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[5]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[5]</obj_property>
-            <obj_property name="ObjectShortName">matrix[5]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[7]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[7]</obj_property>
-            <obj_property name="ObjectShortName">matrix[7]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
-         <wvobject fp_name="/test_pc/uut/MEM/matrix[8]" type="array" db_ref_id="1">
-            <obj_property name="ElementShortName">[8]</obj_property>
-            <obj_property name="ObjectShortName">matrix[8]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         </wvobject>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <wvobject fp_name="/test_pc/uut/MEM/matrix[9]" type="array" db_ref_id="1">
             <obj_property name="ElementShortName">[9]</obj_property>
             <obj_property name="ObjectShortName">matrix[9]</obj_property>
@@ -2796,6 +2838,56 @@
             <obj_property name="ObjectShortName">matrix[10]</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[8]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">matrix[8]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[7]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">matrix[7]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[5]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">matrix[5]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[6]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">matrix[6]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[4]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">matrix[4]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[3]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">matrix[3]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[2]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">matrix[2]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[1]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">matrix[1]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/test_pc/uut/MEM/matrix[0]" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">matrix[0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1161" type="group">
+         <obj_property name="label">first 20 memory slots</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <wvobject fp_name="/test_pc/uut/MEM/matrix[12]" type="array" db_ref_id="1">
             <obj_property name="ElementShortName">[12]</obj_property>
             <obj_property name="ObjectShortName">matrix[12]</obj_property>
@@ -2845,6 +2937,7 @@
       <wvobject fp_name="group2892" type="group">
          <obj_property name="label">rest</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <wvobject fp_name="/test_pc/uut/MEM/matrix[0]" type="array" db_ref_id="1">
             <obj_property name="ElementShortName">[0]</obj_property>
             <obj_property name="ObjectShortName">matrix[0]</obj_property>

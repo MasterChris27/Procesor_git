@@ -1,0 +1,2 @@
+vhdl work "text_read.vhd"
+vhdl work "Test_text_read.vhd"

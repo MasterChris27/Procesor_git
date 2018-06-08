@@ -1,5 +1,6 @@
 vhdl work "UAL.vhd"
 vhdl work "UCP.vhd"
 vhdl work "memory.vhd"
+vhdl work "IO.vhd"
 vhdl work "PC.vhd"
 vhdl work "test_pc.vhd"

@@ -1,0 +1,51 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/boza/4IR/Archi/Procesor/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/boza/4IR/Archi/Procesor/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/boza/4IR/Archi/Procesor/UAL.vhd" in Library work.
+Entity <ual> compiled.
+Entity <ual> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/boza/4IR/Archi/Procesor/UCP.vhd" in Library work.
+Entity <ucp> compiled.
+ERROR:HDLParsers:3312 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 117. Undefined symbol 'Reset'.
+ERROR:HDLParsers:1209 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 117. Reset: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 118. Undefined symbol 'cpu_data_di'.
+ERROR:HDLParsers:1209 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 118. cpu_data_di: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 119. Undefined symbol 'cpu_data_do'.
+ERROR:HDLParsers:1209 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 119. cpu_data_do: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 121. Undefined symbol 'cpu_data_we'.
+ERROR:HDLParsers:1209 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 121. cpu_data_we: Undefined symbol (last report in this block)
+ERROR:HDLParsers:864 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" Line 120. Actual, result of operator, associated with Formal Signal, Signal 'a', is not a Signal. (LRM 2.1.1)
+ERROR:HDLParsers:3298 - "/home/boza/4IR/Archi/Procesor/UCP.vhd" line 121. Expression is not a static name.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+
+
+Total memory usage is 470148 kilobytes
+
+Number of errors   :   10 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

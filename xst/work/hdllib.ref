@@ -1,6 +1,6 @@
-AR ual behavioral /home/boza/4IR/Archi/Procesor/UAL.vhd sub00/vhpl10 1527856574
-EN ual NULL /home/boza/4IR/Archi/Procesor/UAL.vhd sub00/vhpl09 1527856573
-EN ucp NULL /home/boza/4IR/Archi/Procesor/UCP.vhd sub00/vhpl01 1527856575
+AR ual behavioral /home/boza/4IR/Archi/Procesor/UAL.vhd sub00/vhpl10 1528465876
+EN ual NULL /home/boza/4IR/Archi/Procesor/UAL.vhd sub00/vhpl09 1528465875
+EN ucp NULL /home/boza/4IR/Archi/Procesor/UCP.vhd sub00/vhpl01 1528465877
 PH sizes NULL /home/boza/4IR/Archi/Procesor/sizes.vhd sub00/vhpl03 1525448689
 EN pipe_line NULL /home/boza/4IR/Archi/Procesor/pipe_line.vhd sub00/vhpl00 1525429489
 EN reg_16 NULL /home/boza/4IR/Archi/Procesor/Ram_16.vhd sub00/vhpl05 1525448691

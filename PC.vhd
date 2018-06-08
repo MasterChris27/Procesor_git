@@ -68,7 +68,7 @@ component memory is
 end component;
 
 
-component input_output is
+component IO is
     Port ( 
            Bus_address : in  STD_LOGIC_VECTOR (7 downto 0);
 			  Bus_control : in std_logic_vector(1 downto 0);

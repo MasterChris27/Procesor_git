@@ -18,9 +18,11 @@
 --
 ----------------------------------------------------------------------------------
 LIBRARY ieee;
+library work ;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL; 
-use ieee.std_logic_textio;
+use ieee.std_logic_textio.all;
+--use work.functions.all ;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -51,43 +53,36 @@ signal curr_op: std_logic_vector(7 downto 0);
 signal flag : std_logic_vector(3 downto 0);
 signal result : STD_LOGIC_VECTOR (15 downto 0);
 
+
+
+--signal Reset : std_logic := '0' ;
+--signal cpu_data_di: std_logic_vector (31 downto 0);
+--signal cpu_data_do: std_logic_vector (31 downto 0);
+--signal cpu_data_we : std_logic ;
+
+
 signal status : integer range 0 to 10; -- we can have a lvl 10 only status of each instr
 
 
 type register_array is array(0 to 512) of STD_LOGIC_VECTOR (31 downto 0); -- check for a way to put  variables 
-
 signal instr_mem: register_array;
---instr_counter <= 0;
+
 type reg_type is array (15 downto 0) of std_logic_vector(15 downto 0);-- our registries
-signal reg : reg_type;
+signal reg : reg_type:= (others => x"0000");
 
 
 type reg_rec_type is array (10 downto 0) of std_logic_vector(15 downto 0);-- our registries
-
 signal reg_recursivity : reg_rec_type ; -- could create another type of recusivity
 
 
-
---keeping the current instruction in CPU
---signal reg_instructions : std_logic_vector(15 downto 0); -- possibly making an array out of it
 --counting all instructions to be able to return and advance
-
 signal currentInst : integer range 0 to 1024; -- make it better
 signal currentRecursivityLevel : integer range 0 to 10 ;
 
 signal regSelectorA:std_logic_vector(15 downto 0);
 signal regSelectorB:std_logic_vector(15 downto 0);
 
--- might not need this part
-component Reg_16
-    Port(  data_in : in  STD_LOGIC_VECTOR (15 downto 0);  -- entrance
-           data_out : out  STD_LOGIC_VECTOR (15 downto 0);  -- output
-           Clk : in  STD_LOGIC;  -- write or output data
-           Load : in  STD_LOGIC; -- enable entry of data
-           Enable : in  STD_LOGIC); -- enable output of the data 
-end component;
--- until here 
-
+signal signalStore : std_logic_vector(15 downto 0);
 
 
 component UAL	
@@ -98,12 +93,33 @@ component UAL
            Flag : out  STD_LOGIC_VECTOR (3 downto 0) ); -- enable output of the data 
 end component;
 
+component bram32
+  generic (
+    init_file : String := "hex_instr.hex";
+    adr_width : Integer := 12);
+  port (
+	  -- System
+	  sys_clk : in std_logic;
+	  sys_rst : in std_logic;
+	  -- Master
+	  di : out std_logic_vector(31 downto 0);
+	  we : in std_logic;
+	  a : in std_logic_vector(15 downto 0);
+	  do : in std_logic_vector(31 downto 0));
+end component;
 
 
 begin
---RD:Reg_16  port map(Data,Bus_data,Clk,RC(0),RC(1)); -- we set on wich position we set the Load/Enable
--- Add another RD and I will comunicate between them with a signal
- -- cum fac ca RD sa poate fie scris din ambele parti 
+
+--memory_test : bram32 port map (
+--									sys_clk => Clk,
+--									sys_rst => Reset,
+--									di => cpu_data_di,
+--									do => cpu_data_do,
+--									a => std_logic_vector(to_unsigned(currentInst, 16)),
+--									we => cpu_data_we );
+
+
 ALU:UAL port map(regSelectorA,regSelectorB,curr_op,result,flag); -- we always put the resultat S in r1
             --  op @1 @2/
 --####### How to use the instructions ######
@@ -111,28 +127,34 @@ ALU:UAL port map(regSelectorA,regSelectorB,curr_op,result,flag); -- we always pu
 --	Ops: |00 |01 |02 |03 |   04  05   06  07 08   09  0A   0B  0C  0D    0E  0F
 --		  |ADD|SUB|MUL|DIV|STORE LOAD AFC EQU INF InfE Sup SupE Jmp Jmpc Call Ret
 
--- NOT GOOD must increment
-instr_mem(0)<=x"06010032";--afc r1 with 50
-instr_mem(1)<=x"06020023";-- afc r2 with 35
+
+instr_mem(0)<=x"06010005";--afc r1 with 5
+instr_mem(1)<=x"06020006";-- afc r2 with 6
 instr_mem(2)<=x"00020001";-- add and store in r2
-instr_mem(3)<=x"00010002";-- add and store in r6
+instr_mem(3)<=x"00010001";-- add and store in r1
 instr_mem(4)<=x"06060002";--afc r6 with 2
-instr_mem(5)<=x"04020002";-- store at @2 the value of r2
-instr_mem(6)<=x"04030006";-- store at @3 the value of r6
-instr_mem(7)<=x"05020009";-- load in r2 the value from @2
+instr_mem(5)<=x"04000002";-- store at @0 the value of r2
+instr_mem(6)<=x"04010006";-- store at @1 the value of r6
+instr_mem(7)<=x"05030001";-- load in r3 the value from @1
+instr_mem(8)<=x"06010009";--afc r1
+instr_mem(9)<=x"0602000e";-- afc r2
+instr_mem(10)<=x"00010002";-- add and store in r1
+instr_mem(11)<=x"04080001";-- store at @8 the value of r6
+instr_mem(12)<=x"06010009";--afc r1 with 9
+instr_mem(13)<=x"06020009";-- afc r2 with 9
+instr_mem(14)<=x"07010002";-- store in r1 the result of r1==r2
+instr_mem(15)<=x"0d010001";-- if r1 = 0 then we jump at instrc 1
+instr_mem(16)<=x"06010006";--afc r1 with 9
+instr_mem(17)<=x"06020009";-- afc r2 with 9
+instr_mem(18)<=x"08010002";-- store in r1 the result of r1>r2
 
-instr_mem(8)<=x"06010030";--afc r1
-instr_mem(9)<=x"06020020";-- afc r2
-instr_mem(10)<=x"00060001";-- add and store in r6
-instr_mem(11)<=x"04080006";-- store at @8 the value of r6
-
-instr_mem(12)<=x"06010023";--afc r1 with 35
-instr_mem(13)<=x"06020022";-- afc r2 with 35
-instr_mem(14)<=x"07020001";-- store in r1 the result of r1==r2
-
-instr_mem(15)<=x"0e000002";-- if r2 = 0 then we jump at instrc 1
 
 	
+
+
+
+
+
 
 process
 
@@ -147,7 +169,6 @@ process
 			 if(status=0)then -- we have to put it to status =1 for reasigning the value 
 					regSelectorA <=reg(to_integer(unsigned(reg_curr_instr(23 downto 16))));
 					regSelectorB <=reg(to_integer(unsigned(reg_curr_instr(15 downto 0)))); -- maybe 7 downto 0
-					--curr_op<=x"ff";  -- the current operation changes only after the process so it remains to FF when we need it to work
 					status<=status+1;
 					curr_op<=x"00"; 
 				elsif(status=1) then
@@ -205,7 +226,7 @@ process
 			 
 			 end if;
 	 
-  elsif(reg_curr_instr(31 downto 24)= x"04") then-- STORE at @adr the value of Rx
+  elsif(reg_curr_instr(31 downto 24)= x"04") then-- STORE at mem[Rx] = Ry
 			if(status=0)then
 				curr_op<="ZZZZZZZZ";
 				Bus_address <= reg_curr_instr(23 downto 16);
@@ -216,15 +237,12 @@ process
 					status<=0;
 					Bus_control<="ZZ";
 				currentInst<= currentInst+1;
-					--assert false report "Simulation Finished" severity failure;  -- debug stop
-			--	elsif(status=1)then
-			--		if(Bus_data=flag)
 			 end if;	 
 	 
-	elsif(reg_curr_instr(31 downto 24)= x"05") then-- LOAD in Rx the value from @adr
+	elsif(reg_curr_instr(31 downto 24)= x"05") then-- LOAD in Rx the value from @adr y
 			if(status=0)then
 				curr_op<="ZZZZZZZZ";
-				Bus_address <= reg_curr_instr(23 downto 16);
+				Bus_address <= reg_curr_instr(15 downto 0);
 				Bus_control<="00";
 				status<=status+1;
 			elsif(status=1)then
@@ -335,7 +353,7 @@ process
 	elsif(reg_curr_instr(31 downto 24)= x"0d") then-- JMPC
 	--assert false report "Simulation Finished" severity failure;  -- debug stop 
 			if(status=0)then
-				if(reg(to_integer(unsigned(reg_curr_instr(15 downto 0))))=x"00") then
+				if(reg(to_integer(unsigned(reg_curr_instr(15 downto 0))))=x"0000") then
 					currentInst<=to_integer(unsigned(reg_curr_instr(23 downto 16)))+1; -- we increment it automaticly
 				else
 					currentInst<= currentInst+1;

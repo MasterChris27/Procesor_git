@@ -43,7 +43,7 @@ ARCHITECTURE behavior OF testUAL IS
     PORT(
          A : IN  std_logic_vector(15 downto 0);
          B : IN  std_logic_vector(15 downto 0);
-         Op : IN  std_logic_vector(3 downto 0);
+         Op : IN  std_logic_vector(7 downto 0);
          S : OUT  std_logic_vector(15 downto 0);
          Flag : OUT  std_logic_vector(3 downto 0)
         );

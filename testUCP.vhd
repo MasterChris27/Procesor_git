@@ -44,13 +44,15 @@ ARCHITECTURE behavior OF testUCP IS
          Bus_address : OUT  std_logic_vector(7 downto 0);
          Bus_control : OUT  std_logic_vector(1 downto 0);
          Bus_data : INOUT  std_logic_vector(15 downto 0);
-         Clk : IN  std_logic
+         Clk : IN  std_logic;
+			Interuptions : IN std_logic
         );
     END COMPONENT;
     
 
    --Inputs
    signal Clk : std_logic := '0';
+   signal Interuptions : std_logic := '0';
 
 	--BiDirs
    signal Bus_data : std_logic_vector(15 downto 0);
@@ -69,7 +71,9 @@ BEGIN
           Bus_address => Bus_address,
           Bus_control => Bus_control,
           Bus_data => Bus_data,
-          Clk => Clk
+          Clk => Clk,
+			 Interuptions =>Interuptions
+			 
         );
 
    -- Clock process definitions
